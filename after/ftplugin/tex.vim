@@ -15,11 +15,16 @@ nno   <buffer><nowait><silent>  <bslash>ec  :<c-u>tabe $XDG_CONFIG_HOME/latexmk/
 nmap  <buffer><nowait><silent>  <bslash>n   <plug>(vimtex-clean)
 nmap  <buffer><nowait><silent>  <bslash>N   <plug>(vimtex-clean-full)
 
-nmap  <buffer><nowait><silent>  <bslash>S   <plug>(vimtex-stop-all)
 nmap  <buffer><nowait><silent>  <bslash>s   <plug>(vimtex-stop)
+nmap  <buffer><nowait><silent>  <bslash>S   <plug>(vimtex-stop-all)
 
 nmap  <buffer><nowait><silent>  <bslash>v   <plug>(vimtex-view)
 nno   <buffer><nowait><silent>  <bslash>V   :<c-u>call tex#view_selected()<cr>
+
+nmap  <buffer><nowait><silent>  sdc   <plug>(vimtex-cmd-delete)
+nmap  <buffer><nowait><silent>  sdd   <plug>(vimtex-delim-delete)
+nmap  <buffer><nowait><silent>  sde   <plug>(vimtex-env-delete)
+nmap  <buffer><nowait><silent>  sd$   <plug>(vimtex-env-delete-math)
 
 let b:mc_chain = [
 \    'omni',
@@ -45,4 +50,9 @@ let b:undo_ftplugin =         get(b:, 'undo_ftplugin', '')
 \                      | exe 'nunmap <buffer> <bslash>S'
 \                      | exe 'nunmap <buffer> <bslash>v'
 \                      | exe 'nunmap <buffer> <bslash>V'
+\                      | exe 'nunmap <buffer> sde'
+\                      | exe 'nunmap <buffer> sdc'
+\                      | exe 'nunmap <buffer> sd$'
+\                      | exe 'nunmap <buffer> sdd'
 \                      "
+
