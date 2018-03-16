@@ -6,9 +6,11 @@ augroup my_tex
                          \|  setl fdt=fold#text()
 augroup END
 
-nmap  <buffer><nowait><silent>  <bslash>C   <plug>(vimtex-compile)
-nmap  <buffer><nowait><silent>  <bslash>c   <plug>(vimtex-compile-ss)
-xmap  <buffer><nowait><silent>  <bslash>c   <plug>(vimtex-compile-selected)
+nno  <plug>(my-vimtex-update)  :<c-u>sil update<cr>
+
+nmap  <buffer><nowait><silent>  <bslash>C   <plug>(my-vimtex-update)<plug>(vimtex-compile)
+nmap  <buffer><nowait><silent>  <bslash>c   <plug>(my-vimtex-update)<plug>(vimtex-compile-ss)
+xmap  <buffer><nowait><silent>  <bslash>c   <plug>(my-vimtex-update)<plug>(vimtex-compile-selected)
 
 nno   <buffer><nowait><silent>  <bslash>ec  :<c-u>tabe $XDG_CONFIG_HOME/latexmk/latexmkrc<cr>
 
