@@ -29,10 +29,10 @@ nmap  <buffer><nowait><silent>  sde   <plug>(vimtex-env-delete)
 nmap  <buffer><nowait><silent>  sd$   <plug>(vimtex-env-delete-math)
 
 let b:mc_chain = [
-\    'omni',
-\    'ulti',
-\    'keyp',
-\ ]
+    \ 'omni',
+    \ 'ulti',
+    \ 'keyp',
+    \ ]
 
 " teardown {{{1
 
