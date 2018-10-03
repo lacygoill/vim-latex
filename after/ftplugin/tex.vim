@@ -3,7 +3,7 @@ augroup my_tex
     au BufWinEnter <buffer>  setl cocu=nc
                         \ |  setl cole=3
                         \ |  setl fdm=marker
-                        \ |  setl fdt=fold#text()
+                        \ |  setl fdt=fold#fdt#get()
 augroup END
 
 nno  <plug>(my-vimtex-update)  :<c-u>sil update<cr>
