@@ -38,23 +38,25 @@ let b:mc_chain = [
 
 let b:undo_ftplugin = get(b:, 'undo_ftplugin', '')
     \ . (empty(get(b:, 'undo_ftplugin', '')) ? '' : '|')
-    \ . 'setl cocu< cole< fdm< fdt<'
-    \ . '| unlet! b:mc_chain'
-    \ . '| exe "au! my_tex * <buffer>"'
+    \ . "
+    \ setl cocu< cole< fdm< fdt<
+    \|unlet! b:mc_chain
+    \|exe 'au! my_tex * <buffer>'
     \
-    \ . '| nunmap <buffer> <bar>c'
-    \ . '| nunmap <buffer> <bar>C'
-    \ . '| xunmap <buffer> <bar>c'
+    \|nunmap <buffer> <bar>c
+    \|nunmap <buffer> <bar>C
+    \|xunmap <buffer> <bar>c
     \
-    \ . '| nunmap <buffer> <bar>ec'
-    \ . '| nunmap <buffer> <bar>n'
-    \ . '| nunmap <buffer> <bar>N'
-    \ . '| nunmap <buffer> <bar>s'
-    \ . '| nunmap <buffer> <bar>S'
-    \ . '| nunmap <buffer> <bar>v'
-    \ . '| nunmap <buffer> <bar>V'
-    \ . '| nunmap <buffer> sde'
-    \ . '| nunmap <buffer> sdc'
-    \ . '| nunmap <buffer> sd$'
-    \ . '| nunmap <buffer> sdd'
+    \|nunmap <buffer> <bar>ec
+    \|nunmap <buffer> <bar>n
+    \|nunmap <buffer> <bar>N
+    \|nunmap <buffer> <bar>s
+    \|nunmap <buffer> <bar>S
+    \|nunmap <buffer> <bar>v
+    \|nunmap <buffer> <bar>V
+    \|nunmap <buffer> sde
+    \|nunmap <buffer> sdc
+    \|nunmap <buffer> sd$
+    \|nunmap <buffer> sdd
+    \"
 
