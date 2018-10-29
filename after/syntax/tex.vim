@@ -6,8 +6,8 @@ syn region texCommentCode matchgroup=Number start=/^\s*\zs%@\s\?/ end=/$/ concea
 syn region texBackticks matchgroup=Comment start=/`/ end=/`/ oneline concealends containedin=texComment
 
 " replace noisy markers, used in folds, with ❭ and ❬
-exe 'syn match texFoldMarkers  /\s*{'.'{{\d*\s*\ze\n/  conceal cchar=❭  containedin=texComment'
-exe 'syn match texFoldMarkers  /\s*}'.'}}\d*\s*\ze\n/  conceal cchar=❬  containedin=texComment'
+exe 'syn match texFoldMarkers  /%\=\s*{'.'{{\d*\s*\ze\n/  conceal cchar=❭  containedin=texComment'
+exe 'syn match texFoldMarkers  /%\=\s*}'.'}}\d*\s*\ze\n/  conceal cchar=❬  containedin=texComment'
 
 " colors {{{1
 
