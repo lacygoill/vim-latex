@@ -1,11 +1,3 @@
-augroup my_tex
-    au! * <buffer>
-    au BufWinEnter <buffer>  setl cocu=nc
-                        \ |  setl cole=3
-                        \ |  setl fdm=marker
-                        \ |  setl fdt=fold#fdt#get()
-augroup END
-
 nno  <plug>(my-vimtex-update)  :<c-u>sil update<cr>
 
 nmap  <buffer><nowait><silent>  <bar>C   <plug>(my-vimtex-update)<plug>(vimtex-compile)
@@ -39,24 +31,22 @@ let b:mc_chain = [
 let b:undo_ftplugin = get(b:, 'undo_ftplugin', '')
     \ . (empty(get(b:, 'undo_ftplugin', '')) ? '' : '|')
     \ . "
-    \ setl cocu< cole< fdm< fdt<
-    \|unlet! b:mc_chain
-    \|exe 'au! my_tex * <buffer>'
+    \   unlet! b:mc_chain
     \
-    \|nunmap <buffer> <bar>c
-    \|nunmap <buffer> <bar>C
-    \|xunmap <buffer> <bar>c
+    \ | exe 'nunmap <buffer> <bar>c'
+    \ | exe 'nunmap <buffer> <bar>C'
+    \ | exe 'xunmap <buffer> <bar>c'
     \
-    \|nunmap <buffer> <bar>ec
-    \|nunmap <buffer> <bar>n
-    \|nunmap <buffer> <bar>N
-    \|nunmap <buffer> <bar>s
-    \|nunmap <buffer> <bar>S
-    \|nunmap <buffer> <bar>v
-    \|nunmap <buffer> <bar>V
-    \|nunmap <buffer> sde
-    \|nunmap <buffer> sdc
-    \|nunmap <buffer> sd$
-    \|nunmap <buffer> sdd
-    \"
+    \ | exe 'nunmap <buffer> <bar>ec'
+    \ | exe 'nunmap <buffer> <bar>n'
+    \ | exe 'nunmap <buffer> <bar>N'
+    \ | exe 'nunmap <buffer> <bar>s'
+    \ | exe 'nunmap <buffer> <bar>S'
+    \ | exe 'nunmap <buffer> <bar>v'
+    \ | exe 'nunmap <buffer> <bar>V'
+    \ | exe 'nunmap <buffer> sde'
+    \ | exe 'nunmap <buffer> sdc'
+    \ | exe 'nunmap <buffer> sd$'
+    \ | exe 'nunmap <buffer> sdd'
+    \ "
 
