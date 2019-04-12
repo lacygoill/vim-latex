@@ -28,10 +28,9 @@ let b:mc_chain = [
 
 " teardown {{{1
 
-let b:undo_ftplugin = get(b:, 'undo_ftplugin', '')
-    \ . (empty(get(b:, 'undo_ftplugin', '')) ? '' : '|')
+let b:undo_ftplugin = get(b:, 'undo_ftplugin', 'exe')
     \ . "
-    \   unlet! b:mc_chain
+    \ | unlet! b:mc_chain
     \
     \ | exe 'nunmap <buffer> <bar>c'
     \ | exe 'nunmap <buffer> <bar>C'
