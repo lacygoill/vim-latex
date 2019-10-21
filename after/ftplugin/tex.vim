@@ -21,9 +21,9 @@ nmap <buffer><nowait><silent> sde <plug>(vimtex-env-delete)
 nmap <buffer><nowait><silent> sd$ <plug>(vimtex-env-delete-math)
 
 let b:mc_chain =<< trim END
-omni
-ulti
-keyn
+    omni
+    ulti
+    keyn
 END
 
 " teardown {{{1
