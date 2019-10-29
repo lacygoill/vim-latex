@@ -26,26 +26,8 @@ let b:mc_chain =<< trim END
     keyn
 END
 
-" teardown {{{1
+" Teardown {{{1
 
 let b:undo_ftplugin = get(b:, 'undo_ftplugin', 'exe')
-    \ ..'
-    \ | unlet! b:mc_chain
-    \
-    \ | exe "nunmap <buffer> <bar>c"
-    \ | exe "nunmap <buffer> <bar>C"
-    \ | exe "xunmap <buffer> <bar>c"
-    \
-    \ | exe "nunmap <buffer> <bar>ec"
-    \ | exe "nunmap <buffer> <bar>n"
-    \ | exe "nunmap <buffer> <bar>N"
-    \ | exe "nunmap <buffer> <bar>s"
-    \ | exe "nunmap <buffer> <bar>S"
-    \ | exe "nunmap <buffer> <bar>v"
-    \ | exe "nunmap <buffer> <bar>V"
-    \ | exe "nunmap <buffer> sde"
-    \ | exe "nunmap <buffer> sdc"
-    \ | exe "nunmap <buffer> sd$"
-    \ | exe "nunmap <buffer> sdd"
-    \ '
+    \ ..'| call tex#undo_ftplugin()'
 
