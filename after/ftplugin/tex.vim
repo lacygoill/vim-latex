@@ -29,5 +29,5 @@ END
 " Teardown {{{1
 
 let b:undo_ftplugin = get(b:, 'undo_ftplugin', 'exe')
-    \ ..'| call tex#undo_ftplugin()'
+    \ .. '| call tex#undo_ftplugin()'
 

@@ -1,5 +1,6 @@
 fu tex#view_selected() abort "{{{1
-    sil call system('xdg-open '..shellescape(expand('%:p:h')..'/build/'..expand('%:t:r')..'_vimtex_selected.pdf'))
+    sil call system('xdg-open '
+        \ .. (expand('%:p:h') .. '/build/' .. expand('%:t:r') .. '_vimtex_selected.pdf')->shellescape())
 endfu
 
 fu tex#undo_ftplugin() abort "{{{1
