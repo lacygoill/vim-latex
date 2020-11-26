@@ -1,10 +1,10 @@
-nno <plug>(my-vimtex-update) :<c-u>sil update<cr>
+nno <plug>(my-vimtex-update) <cmd>sil update<cr>
 
 nmap <buffer><nowait><silent> <bar>C <plug>(my-vimtex-update)<plug>(vimtex-compile)
 nmap <buffer><nowait><silent> <bar>c <plug>(my-vimtex-update)<plug>(vimtex-compile-ss)
 xmap <buffer><nowait><silent> <bar>c <plug>(my-vimtex-update)<plug>(vimtex-compile-selected)
 
-nno  <buffer><nowait><silent> <bar>ec :<c-u>tabe $XDG_CONFIG_HOME/latexmk/latexmkrc<cr>
+nno  <buffer><nowait> <bar>ec <cmd>tabe $XDG_CONFIG_HOME/latexmk/latexmkrc<cr>
 
 nmap <buffer><nowait><silent> <bar>n <plug>(vimtex-clean)
 nmap <buffer><nowait><silent> <bar>N <plug>(vimtex-clean-full)
@@ -13,7 +13,7 @@ nmap <buffer><nowait><silent> <bar>s <plug>(vimtex-stop)
 nmap <buffer><nowait><silent> <bar>S <plug>(vimtex-stop-all)
 
 nmap <buffer><nowait><silent> <bar>v <plug>(vimtex-view)
-nno  <buffer><nowait><silent> <bar>V :<c-u>call tex#view_selected()<cr>
+nno  <buffer><nowait> <bar>V <cmd>call tex#view_selected()<cr>
 
 nmap <buffer><nowait><silent> sdc <plug>(vimtex-cmd-delete)
 nmap <buffer><nowait><silent> sdd <plug>(vimtex-delim-delete)
